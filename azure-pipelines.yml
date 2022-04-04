@@ -9,9 +9,18 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-variables:
-  buildConfiguration: 'Release'
+stages:
+- stage: s1
+  displayName: stage1
+  jobs:
+    - job: j1
+      steps:
+        - bash:
+            sleep 10
+            echo "hello"
+    - job: j2
+      steps:
+        - bash:
+            sleep 10
+            echo "world"
 
-steps:
-- script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
