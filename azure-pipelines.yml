@@ -16,11 +16,11 @@ stages:
     - job: j1
       steps:
         - bash:
-            sleep 10
+            sleep 20
             echo "hello"
     - job: j2
       steps:
         - bash:
-            sleep 10
+            sleep 20
             echo "world"
 
