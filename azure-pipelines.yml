@@ -24,3 +24,19 @@ stages:
             sleep 20
             echo "world"
 
+- stage: s2
+  displayName: stage2
+  jobs:
+    - job: j3
+      steps:
+        - bash: |
+            sleep 20
+            echo "hello"
+    - job: j4
+      steps:
+        - bash: |
+            sleep 20
+            echo "world"            
+
+            
+
