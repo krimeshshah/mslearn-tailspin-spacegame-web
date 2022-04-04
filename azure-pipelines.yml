@@ -15,12 +15,12 @@ stages:
   jobs:
     - job: j1
       steps:
-        - bash:
+        - bash: |
             sleep 20
             echo "hello"
     - job: j2
       steps:
-        - bash:
+        - bash: |
             sleep 20
             echo "world"
 
