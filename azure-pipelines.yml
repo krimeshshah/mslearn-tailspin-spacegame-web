@@ -37,7 +37,17 @@ stages:
       steps:
         - bash: |
             sleep 20
-            echo "world"            
+            echo "world" 
+    - job: j5
+      steps:
+        - task: Kubernetes@1
+          displayName: kubectl create
+          inputs:
+            connectionType: Kubernetes Service Connection
+            kubernetesServiceEndpoint: crp-k8s
+            command: create
+            arguments: namespace test
+                
 
             
 
