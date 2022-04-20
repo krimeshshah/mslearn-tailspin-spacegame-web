@@ -6,8 +6,8 @@
 trigger:
 - main
 
-pool: test1
-#  vmImage: ubuntu-latest
+pool: 
+  vmImage: ubuntu-latest
 
 stages:
 - stage: s1
@@ -44,7 +44,7 @@ stages:
           inputs:
             connectionType: Kubernetes Service Connection
             kubernetesServiceEndpoint: crp-k8s
-            command: create
+            command: delete
             arguments: namespace test
                 
 
